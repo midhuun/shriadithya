@@ -47,3 +47,13 @@ window.location.href = "tel:9092812121";
  function goBack() {
     window.history.back();
   }
+  function download() {
+    const a = document.createElement('a');
+    const filePath = './brochure-tamil.pdf';
+    a.href = filePath;
+    a.download = filePath; // Use the correct file name
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+  
